@@ -1,0 +1,48 @@
+git 指令：
+1.$ git   //查看是否安装git
+
+
+2.$ git config --global user.name "Your Name"  //设置git名称
+$ git config --global user.email "email@example.com"  //设置git邮箱
+
+
+3.$ mkdir XXX   //在版本库中创建一个文件
+  git init  //把这个文件设置成git可以管理的文件
+  git add xxx.txt     //把XXX文件添加到版本库中，放到暂存区中。
+  git commit -m "注释"   //添加注释，把暂存区的修改提交到分支中。
+
+
+4.git status  //可以随时掌握工作区的状态
+  git diff  //告诉你文件被修改的内容
+
+
+5.管理修改
+git reset --hard HEAD^  //返回文件上一个版本  HEAD^^返回上两个版本
+  git log  //查看提交历史 ，用于回到之前版本
+  git reflog  //查看命令历史 ，用于回到未来的版本
+
+
+6.工作区就是电脑中看到的目录，例如 learngit
+  版本库就是隐藏的目录，版本库中有 stage（index）的暂存区，还有git为我们创建的第一个分支 master
+
+
+7.撤销修改
+  $ git checkout --XXX.TXT  //丢弃工作区的修改
+  场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
+
+场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
+
+场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
+
+
+8.删除文件
+  $ git rm XXX.TXT
+
+
+9.关联github上的库
+ $ git remote add origin git@github.com:用户名/learngit.git
+
+ $ git push -u origin master //把本地的所以内容推送到远程库origin  参数 -u
+  Git不但会把本地的master分支内容推送的远程新的master分支，
+  还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+  
