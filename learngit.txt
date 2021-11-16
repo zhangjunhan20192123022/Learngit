@@ -57,3 +57,11 @@ git rm XXX.txt //删除版本库文件
 
 11.克隆远程库
 git clone git@github.com：用户名/远程库名称.git
+
+
+12.创建分支
+git checkout -b dev  //创建一个dev分支  -b表示创建并切换
+git branch //查看所以分支
+git switch master  //切换回master分支
+git merge dev   //合并当前分支
+git branch -d dev  //删除dev分支
