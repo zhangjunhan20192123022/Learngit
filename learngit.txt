@@ -65,3 +65,8 @@ git branch //查看所以分支
 git switch master  //切换回master分支
 git merge dev   //合并当前分支
 git branch -d dev  //删除dev分支
+
+13.解决分支冲突:当不同分支修改同一部分内容时产生冲突
+ git log --graph  //查看分支合并图
+ git merge --no-ff -m "merge with no-ff" dev  //合并dev分支，并禁用Fast forward
+
