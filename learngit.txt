@@ -58,6 +58,13 @@ git rm XXX.txt //删除版本库文件
 11.克隆远程库
 git clone git@github.com：用户名/远程库名称.git
 
+12.拉取远程库 和 抓取远程库
+git pull origin master 拉到本地并合并
+
+git fetch origin master 拉到本地不合并
+
+
+
 
 12.创建分支
 git checkout -b dev  //创建一个dev分支  -b表示创建并切换
